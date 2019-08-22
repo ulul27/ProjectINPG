@@ -1,35 +1,17 @@
 /* 
-ingat langkah demi langkah ya
-() YANG KITA CARI APA?
-    * nama lengkap/ nama  harus diisi jika kosong tidak bisa masuk
+    variable math
+     --> .random();
 
-    * random color tapi cuma 1 warna aja
-    * yang beda di klik benar
-    * misal klik salah tetap berlanjut
-    
-    * tampil score benar berapa
-    * tampil nama/ player
-    
-() BAGAIMANA CARA MENCARINYA?
-    * belum tau
+print "which box?";
 
-    * pake function Math.floor(Math.random)
-    * belum tau
-    * belum tau
-    
-    * 
-() BUTUH APA SAJA?
-    * var = document.getElamentId
-    * 
-    * 
-*/
-/*
-kotak berjumlah 4 berupa div -- id = box1 - box4
-    nanti akan diacak menggunakan == math.random warnanya sebanyak 20 kali kenapa karena kita akan 20 level
-        => 3 warna yang sama document.getElementById
-        => 1 warna beda
+capture ( box.result / answer );
 
-    
+    if ( box.result == true ) {
+        then level++ {
+    else {}
+        }
+    console.log "( box.result ) + you choose is wrong, please choose again!"
+    }
 */
 
 //Nb : variabel itu wadah itu bukan parameter
@@ -47,8 +29,18 @@ kotak berjumlah 4 berupa div -- id = box1 - box4
 //     kotak[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
 // }
-function getRandomInt() {
-    
-    document.getElementById('box').innerHTML
-    return Math.floor(Math.random() * 5);
+function acak () {
+    var randomed = Math.floor(Math.random() * 4);
+
+    for(var i = 0; i < 4; i++) {
+        console.log(i)
+        if (randomed == i) {
+            console.log(i, 'red');
+            
+            document.getElementsByClassName(String(i))[0].style.backgroundColor = 'red'
+        } else {
+            document.getElementsByClassName(String(i))[0].style.backgroundColor = 'green'
+        }
+    }
+}
   

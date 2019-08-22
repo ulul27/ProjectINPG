@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GAME</title>
-    <style>
-    body{
-        height: 700px;
-        background-color: skyblue;
-        background-image: linear-gradient(skyblue, white);
-    }
-    #box{
-        width: 150px;
-        height: 150px;
-        display: inline-block;
-        margin: 5px;
-        cursor: pointer;
-    }
-    #box2{
-        width: 150px;
-        height: 150px;
-        background: green;
-        display: inline-block;
-        margin: 5px;
-        cursor: pointer;
-    }
-    #box3{
-        width: 150px;
-        height: 150px;
-        background: green;
-        display: inline-block;
-        margin: 5px;
-        cursor: pointer;
-    }
-    #box4{
-        width: 150px;
-        height: 150px;
-        background: green;
-        display: inline-block;
-        margin: 5px;
-        cursor: pointer;
-    }
-    body{
-        text-align: center;
-    }
-    </style>
-</head>
-<body>
-    <p><h2>Cara Menjalankan Tes Buta Warna adalah Memilih warna yang berbeda dengan warna yang lain</h2></p>
+        <title>GAME</title>
+            <style>
+                body{
+                    height: 700px;
+                    background-color: skyblue;
+                    background-image: linear-gradient(skyblue, white);
+                }
+                button {
+                    width: 150px;
+                    height: 150px;
+                    display: inline-block;
+                    margin: 5px;
+                    cursor: pointer;
+                }
+                button.satu{
+                    background:green;
+                }
+                button.dua{
+                    background:green;
+                }
+                button.tiga{
+                    background:green;
+                }
+                button.empat{
+                    background:green;
+                }
+                body{
+                    text-align: center;
+                }
+            </style>
+    </head>
+    <body>
+        <p><h3>Cara Menjalankan Tes Buta Warna adalah Memilih warna yang berbeda dengan warna yang lain</h3></p>
+            <button class="0" onclick="acak()"></button>
+            <button class="1" onclick="acak()"></button>
+            <br>
+            <button class="2" onclick="acak()"></button>
+            <button class="3" onclick="acak()"></button>
+    </body>
+        <script src="tesButaWarna.js"></script>
 
-    <div id="box" onclick="alert('bisa')"></div>
-    <div id="box" onclick="alert('bisa')"></div>
-    <br style="clear:both">
-    <div id="box" onclick="alert('bisa')"></div>
-    <div id="box" onclick="alert('bisa')"></div>
-</body>
-<script type="text/javascript" src="tesButaWarna.js"></script>
+<!--        <script>
+                /*var id = document.getElementById('kotak')
+
+                console.log(id) */
+                //var kotak = document.getElementsByClassName("satu");
+
+                //console.log(kotak);
+                function acak () {
+                    var randomed = Math.floor(Math.random() * 4);
+
+                    for(var i = 0; i < 4; i++) {
+                        console.log(i)
+                        if (randomed == i) {
+                            console.log(i, 'red');
+                            
+                            document.getElementsByClassName(String(i))[0].style.backgroundColor = 'red'
+                        } else {
+                            document.getElementsByClassName(String(i))[0].style.backgroundColor = 'green'
+                        }
+                    }
+                }
+        </script> -->
 </html>
